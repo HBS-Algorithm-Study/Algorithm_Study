@@ -13,7 +13,6 @@ public class Boj1940 {
             S[i] = sc.nextInt();
         }
         Arrays.sort(S);
-
         int i = 0;
         int j = N-1;
         while(i<j) {

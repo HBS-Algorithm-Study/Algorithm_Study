@@ -22,7 +22,6 @@ public class Boj2018 {
                 start++;
             }
         }
-
         System.out.println(count);
     }
 }

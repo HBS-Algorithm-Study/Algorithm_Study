@@ -15,6 +15,5 @@ public class Boj11659 {
             int b = sc.nextInt();
             System.out.println(S[b]-S[a-1]);
         }
-
     }
 }

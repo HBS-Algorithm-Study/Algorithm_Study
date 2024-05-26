@@ -12,7 +12,6 @@ public class Boj1546 {
             if (S[i] >= M) M = S[i];
             sum += S[i];
         }
-
         System.out.println((double)sum*100/M/N);
     }
 }

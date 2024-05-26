@@ -7,6 +7,7 @@ public class Boj11720 {
         String S = sc.next();
         char[] L = S.toCharArray();
         int sum = 0;
+
         for (int i = 0; i < L.length; i++) {
             sum += Character.getNumericValue(L[i]);
         }

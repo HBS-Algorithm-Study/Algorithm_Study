@@ -38,3 +38,31 @@ class 절댓값힙11286 {
         }
     }
 }
+
+class 절댓값힙 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        PriorityQueue<Integer> queue = new PriorityQueue<>((o1,o2)->{
+            int f = Math.abs(o1);
+            int s= Math.abs(o2);
+            if(f==s){
+                return o1>o2 ? 1:-1;
+            }
+            return f-s;
+        });
+        for (int i = 0; i < N; i++) {
+            int op = sc.nextInt();
+            if(op==0){
+                if(queue.isEmpty()) System.out.println(0);
+                else{
+                    System.out.println(queue.poll());
+                }
+            }else {
+                queue.add(op);
+            }
+        }
+
+    }
+}
+

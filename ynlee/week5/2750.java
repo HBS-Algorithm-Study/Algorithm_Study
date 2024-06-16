@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +13,7 @@ public class Main {
 
         Arrays.sort(numbers, (a, b) -> a - b);
         Arrays.stream(numbers).forEach(System.out::println);
+
         //     Arrays.stream(numbers).sorted().forEach(System.out::println);
     }
 }

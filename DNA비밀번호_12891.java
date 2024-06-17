@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int dnaLen = Integer.parseInt(st.nextToken());
-        int pwLen = Integer.parseInt(st.nextToken());
+        int dnaLen = Integer.parseInt(st.nextToken());    //DNA 문자열 크기
+        int pwLen = Integer.parseInt(st.nextToken());    //비밀번호 문자열 크기
 
         String dnaStr = br.readLine();
 
-        int[] minArr = new int[4];
+        int[] minArr = new int[4];    // 최소 몇개가 필요한지
         st = new StringTokenizer(br.readLine());
         for(int i=0; i<4; i++){
             minArr[i] = Integer.parseInt(st.nextToken());

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Main {
+public class 스택수열_1874 {
 	public static void main(String[] args)  {
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //		int n = Integer.parseInt(br.readLine());

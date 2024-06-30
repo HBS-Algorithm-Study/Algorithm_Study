@@ -3,7 +3,7 @@ package study_5;
 import java.io.*;
 
 
-public class Main {
+public class 수정렬하기4_11931 {
     public static int[] arr;
     public static int[] tmp;
     public static void main(String[] args) throws IOException {

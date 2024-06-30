@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 
 //우선순위 큐 커스터마이징 하는 방법!
-public class Main {
+public class 절대값힙_11286 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		

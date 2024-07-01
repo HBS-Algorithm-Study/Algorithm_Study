@@ -55,7 +55,6 @@ class Main {
                 result.append("+").append("\n");
                 current++;
             }
-
             if (!stack.isEmpty() && stack.peek() == num) {
                 stack.pop();
                 result.append("-").append("\n");

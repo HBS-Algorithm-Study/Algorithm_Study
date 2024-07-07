@@ -28,11 +28,11 @@ public class Main {
                 maze[v].add(u);
             }
 
-            System.out.println(isBipartite(maze, V) ? "YES" : "NO");
+            System.out.println(bfs(maze, V) ? "YES" : "NO");
         }
     }
 
-    public static boolean isBipartite(List<Integer>[] maze, int V) {
+    public static boolean bfs(List<Integer>[] maze, int V) {
         int[] group = new int[V + 1]; 
         Queue<Integer> queue = new LinkedList<>();
 

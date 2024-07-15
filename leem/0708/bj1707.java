@@ -3,7 +3,7 @@ import java.util.*;
 public class bj1707 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int K = sc.nextInt();
+        int K = sc.nextInt(); // 테스트 케이스 종류
         
         for (int t = 0; t < K; t++) {
             int V = sc.nextInt();
@@ -21,7 +21,7 @@ public class bj1707 {
                 graph.get(v).add(u);
             }
             
-            if (isBipartite(graph, V)) {
+            if (bipartite(graph, V)) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
@@ -30,13 +30,14 @@ public class bj1707 {
         sc.close();
     }
     
-    private static boolean isBipartite(List<List<Integer>> graph, int V) {
+    private static boolean bipartite(List<List<Integer>> graph, int V) {
+        // 인접 정점끼리 서로 다른 색으로 칠 할 때 총 2가지의 색만 나올 수 있게 하는것
         int[] colors = new int[V + 1];
         Arrays.fill(colors, 0);
         
         for (int i = 1; i <= V; i++) {
             if (colors[i] == 0) {
-                if (!dfs(graph, colors, i, 1)) {
+                if (!dfs(graph, colors, i, 1)) { // 색이 칠해지지 않은 I을 실행하며 DFS을 돌리고 이분그래프 여부 확인
                     return false;
                 }
             }
@@ -48,7 +49,7 @@ public class bj1707 {
         colors[node] = color;
         for (int n : graph.get(node)) {
             if (colors[n] == 0) {
-                if (!dfs(graph, colors, n, -color)) {
+                if (!dfs(graph, colors, n, -color)) { // 반대색으로 칠하고 재귀(-1)
                     return false;
                 }
             } else if (colors[n] == colors[node]) {

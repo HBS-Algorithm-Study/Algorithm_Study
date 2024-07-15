@@ -16,11 +16,11 @@ public class bj10775 {
         int docking = 0; // 도킹 가능한 비행기 
         for (int i = 0; i < P; i++) { 
             int gate = sc.nextInt(); // 도킹가능한 최대 게이트 범위(입력)
-            int validGate = find(gate);
-            if (validGate == 0) { // 비행기가 어느 게이트에도 도킹할 없는 경우 종료 (조건)
+            int possibleG = find(gate);
+            if (possibleG == 0) { // 비행기가 어느 게이트에도 도킹할 없는 경우 종료 (조건)
                 break;
             }
-            union(validGate, validGate - 1);
+            union(possibleG, possibleG - 1);
             docking++;
         }
         System.out.println(docking); // 결과

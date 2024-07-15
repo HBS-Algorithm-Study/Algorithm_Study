@@ -6,10 +6,7 @@ public static void main(String[] args) {
     int n = sc.nextInt();
     sc.close();
     int[] dp = new int[n + 1];
-    if( n == 0 ) {
-        System.out.println(0);
-        return;
-    } 
+     
     dp[0] = 1;
     dp[1] = 1;
         

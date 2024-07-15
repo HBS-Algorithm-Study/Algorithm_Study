@@ -5,6 +5,7 @@ import java.util.*;
 //	E: 간선의 수
 //	E개의 간선 정보: 각 간선은 두 정점 u와 v로 표현
 
+
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,9 +29,15 @@ public class Main {
                 maze[v].add(u);
             }
 
-            System.out.println(bfs(maze, V) ? "YES" : "NO");
+            // System.out.println(bfs(maze, V) ? "YES" : "NO");
+            if (bfs(maze, V)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
         }
     }
+
 
     public static boolean bfs(List<Integer>[] maze, int V) {
         int[] group = new int[V + 1]; 
@@ -48,7 +55,7 @@ public class Main {
                         group[m] = -group[node];
                         queue.add(m);
                     } else if (group[m] == group[node]) {
-                        return false;
+                        return false;d
                     }
                 }
             }

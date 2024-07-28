@@ -2,6 +2,8 @@ package week7;
 import java.util.*;
 
 public class Boj1931 {
+    // 회의실 배정
+    // Greedy
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
@@ -22,15 +24,14 @@ public class Boj1931 {
         });
 
         int count = 0;
-        int prev_end_time = 0;
+        int bf_end_time = 0;
         for(int i = 0; i < N; i++) {
             // 직전 종료시간이 다음 회의 시작 시간보다 작거나 같다면 갱신
-            if(prev_end_time <= time[i][0]) {
-                prev_end_time = time[i][1];
+            if(bf_end_time <= time[i][0]) {
+                bf_end_time = time[i][1];
                 count++;
             }
         }
         System.out.println(count);
     }
-
 }

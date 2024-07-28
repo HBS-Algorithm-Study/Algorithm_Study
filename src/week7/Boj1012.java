@@ -4,8 +4,7 @@ import java.util.*;
 
 public class Boj1012 {
     // 유기농 배추 키우기
-        // BFS
-
+    // BFS
     static int M, N, K;
     static int[][] cabbage;
     static boolean[][] visit;

@@ -16,11 +16,12 @@ public class Boj2667 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         answer = new LinkedList<>();
-        N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(br.readLine());    // N: 지도의 크기
         danji = new int[N][N];
         visited = new boolean[N][N];
         count = 1;
 
+        // 집 위치 입력받기
         for(int i=0; i<N; i++) {
             String str = br.readLine();
             for(int j=0; j<N; j++) {
